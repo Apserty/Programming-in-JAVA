@@ -1,48 +1,33 @@
-# Programming-in-JAVA
-Place where you can find Q&amp;A's for JAVA
-# Programming in JAVA
+# Java Multithreading (Multithreading Branch)
 
-Welcome to the **Programming in JAVA** repository! This project serves as a comprehensive hub for Java programming Question and Answer (Q&A) sessions, code snippets, and conceptual implementations.
+Welcome to the **Multithreading** branch of the Programming-in-JAVA repository! This branch focuses on understanding how to execute multiple threads simultaneously to maximize CPU utilization and build high-performance applications.
 
-## 📌 About the Repository
-This repository is designed to be a central place where you can find structured Q&A's and code examples for various Java programming concepts. It is built to help developers, students, and enthusiasts master Java through practical problem-solving.
+## 🧵 What is Multithreading?
+Multithreading is a Java feature that allows concurrent execution of two or more parts of a program for maximum utilization of the CPU. Each part of such a program is called a thread. Threads are lightweight processes within a process.
 
-## 🌿 Branching Strategy
-To keep the learning experience organized and clutter-free, **each Java concept has its own dedicated branch**. 
+## 📂 Core Concepts Covered
+* **Thread Creation** – Inheriting from the `Thread` class vs. implementing the `Runnable` interface.
+* **Thread Lifecycle** – Navigating states like New, Runnable, Blocked, Waiting, Timed Waiting, and Terminated.
+* **Synchronization** – Preventing thread interference and data corruption using `synchronized` blocks and methods.
+* **Inter-Thread Communication** – Utilizing `wait()`, `notify()`, and `notifyAll()` to coordinate tasks between active threads.
+* **Thread Pools** – Managing a collection of worker threads using the `ExecutorService` framework.
 
-You can explore specific topics by switching to their respective branches. Some of the core concepts covered include:
+## ❓ Frequently Asked Q&As
 
-* **`main` / `master`** – The default branch containing this README and general project guidelines.
-* **`oop-concepts`** – Object-Oriented Programming principles (Inheritance, Polymorphism, Encapsulation, Abstraction).
-* **`data-structures`** – Collections framework, Lists, Sets, Maps, and Arrays.
-* **`exception-handling`** – Try-catch blocks, custom exceptions, and error management.
-* **`multithreading`** – Concurrency, threads, and synchronization basics.
-* *(More concept-specific branches are added regularly!)*
+### Q1: What is the difference between extending `Thread` and implementing `Runnable`?
+* **Extending `Thread`:** Your class cannot extend any other class because Java does not support multiple inheritance.
+* **Implementing `Runnable`:** Your class can still extend another base class, making it a more flexible design choice widely preferred in production code.
 
-### How to Switch Branches
-To view the code and Q&As for a specific topic, use the following Git command in your terminal:
-```bash
-git checkout <branch-name>
-```
-Alternatively, you can use the branch dropdown menu at the top-left of the GitHub interface to switch themes.
+### Q2: What is the difference between `start()` and `run()` methods?
+* Calling `start()` creates a brand new thread and allocates the necessary system resources before executing the `run()` method within that new context.
+* Calling `run()` directly does not create a new thread; it simply executes the code sequentially like a regular method inside the current calling thread.
 
-## 🚀 How to Use This Repository
-1. **Clone the repository** to your local machine:
+### Q3: Why is thread synchronization necessary?
+When multiple threads try to access and modify a shared mutable resource at the same time, it leads to data inconsistency (Race Condition). Synchronization ensures that only one thread can access the critical section of code at a single time.
+
+## 🚀 How to Run Code in This Branch
+1. Ensure you have switched to this branch locally:
    ```bash
-   git clone https://github.com
+   git checkout Multithreading
    ```
-2. **Navigate** into the project directory:
-   ```bash
-   cd Programming-in-JAVA
-   ```
-3. **Fetch all branches** from remote:
-   ```bash
-   git fetch --all
-   ```
-4. **Switch** to the concept branch you wish to study and explore the source files.
-
-## 🤝 Contributing
-Contributions are always welcome! If you have a great Java Q&A or a code solution you'd like to share:
-1. Create a new branch for your specific topic/question.
-2. Commit your changes with clear messages.
-3. Open a **Pull Request** targeting the appropriate concept branch.
+2. Compile and run the concurrent examples found in this folder directory.
