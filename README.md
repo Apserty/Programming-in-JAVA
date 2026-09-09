@@ -7,17 +7,29 @@ Welcome to the **Programming in JAVA** repository! This project serves as a comp
 ## 📌 About the Repository
 This repository is designed to be a central place where you can find structured Q&A's and code examples for various Java programming concepts. It is built to help developers, students, and enthusiasts master Java through practical problem-solving.
 
-## 🌿 Branching Strategy
-To keep the learning experience organized and clutter-free, **each Java concept has its own dedicated branch**. 
+## 🌿 Navigation Roadmap
+To keep the code clean and clutter-free, **this repository uses a concept-per-branch strategy**. Use the table below to jump directly to the specific branch you want to study:
 
-You can explore specific topics by switching to their respective branches. Some of the core concepts covered include:
+| Topic / Concept | Branch Link | Focus Areas | Status |
+| :--- | :--- | :--- | :--- |
+| 📦 **Packages** | [`Package`](https://github.com) | Namespaces, Built-in vs User Packages, Access Modifiers |  Completed |
+| 🔄 **Serialization** | [`Sterlization`](https://github.com) | Object streams, `Serializable`, `transient` keyword |  Completed |
+| 🧵 **Multithreading** | [`Multithreading`](https://github.com) | Threads, Runnable, Synchronization, Lifecycle |  Completed |
+| 🗄️ **JDBC** | [`JDBC`](https://github.com) | Database Connectivity, Statements, CRUD, Transactions |  Completed |
+| 🧬 **Generics** | [`Generic-class`](https://github.com) | Type safety, Generic methods, Wildcards, Type erasure |  Completed |
+| 📁 **File Handling** | [`File-handling`](https://github.com) | Streams (Byte/Character), BufferedReader, NIO package |  Completed |
+| ⚠️ **Exceptions** | [`Exceptions`](https://github.com) | Try-catch-finally, Checked vs Unchecked, Custom errors |  Completed |
+| 🗃️ **Collections** | [`Collections`](https://github.com) | List, Set, Map, Sorting (Comparable/Comparator) |  Completed |
+| ☕ **Java 8+ Features** | `Coming Soon` | Lambdas, Streams API, Optional class, Functional Interfaces | ⏳ Planned |
 
-* **`main` / `master`** – The default branch containing this README and general project guidelines.
-* **`oop-concepts`** – Object-Oriented Programming principles (Inheritance, Polymorphism, Encapsulation, Abstraction).
-* **`data-structures`** – Collections framework, Lists, Sets, Maps, and Arrays.
-* **`exception-handling`** – Try-catch blocks, custom exceptions, and error management.
-* **`multithreading`** – Concurrency, threads, and synchronization basics.
-* *(More concept-specific branches are added regularly!)*
+---
+
+## 🛠️ Prerequisites & Setup
+Before exploring the code snippets in the branches, ensure your local environment is set up:
+* **Java Development Kit (JDK):** JDK 11 or higher recommended.
+* **IDE:** IntelliJ IDEA, Eclipse, or VS Code with Java Extension Pack.
+* **Database (For JDBC):** MySQL or PostgreSQL installed locally.
+
 
 ### How to Switch Branches
 To view the code and Q&As for a specific topic, use the following Git command in your terminal:
