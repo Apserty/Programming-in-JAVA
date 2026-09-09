@@ -53,20 +53,6 @@ Alternatively, you can use the branch dropdown menu at the top-left of the GitHu
    ```
 4. **Switch** to the concept branch you wish to study and explore the source files.
 
----
-
-# 1. Ensure you are safely resting on your main branch workspace
-git checkout main
-
-# 2. Add your new README.md and .gitignore files to the staging phase
-git add README.md .gitignore
-
-# 3. Create a checkpoint commit message
-git commit -m "Initial repository directory infrastructure setup"
-
-# 4. Safely push the branch state up to GitHub
-git push origin main
-
 
 ## 🤝 Contributing
 Contributions are always welcome! If you have a great Java Q&A or a code solution you'd like to share:
