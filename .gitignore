@@ -1,0 +1,35 @@
+# Compiled Java source files
+*.class
+
+# Log files
+*.log
+
+# BlueJ project files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# IntelliJ IDEA workspace files
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Eclipse workspace metadata
+.metadata/
+.classpath
+.project
+.settings/
+
+# VS Code workspace files
+.vscode/
