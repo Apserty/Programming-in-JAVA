@@ -1,48 +1,33 @@
-# Programming-in-JAVA
-Place where you can find Q&amp;A's for JAVA
-# Programming in JAVA
+# Java Database Connectivity (JDBC Branch)
 
-Welcome to the **Programming in JAVA** repository! This project serves as a comprehensive hub for Java programming Question and Answer (Q&A) sessions, code snippets, and conceptual implementations.
+Welcome to the **JDBC** branch of the Programming-in-JAVA repository! This branch focuses on understanding how Java applications connect and interact with relational databases using the standard JDBC API.
 
-## 📌 About the Repository
-This repository is designed to be a central place where you can find structured Q&A's and code examples for various Java programming concepts. It is built to help developers, students, and enthusiasts master Java through practical problem-solving.
+## 🗄️ What is JDBC?
+Java Database Connectivity (JDBC) is a Java API that manages connecting to a database, executing SQL statements, and processing the retrieved results. It serves as an abstraction layer between your Java code and database engines like MySQL, PostgreSQL, or Oracle.
 
-## 🌿 Branching Strategy
-To keep the learning experience organized and clutter-free, **each Java concept has its own dedicated branch**. 
+## 📂 Core Concepts Covered
+* **JDBC Drivers** – Understanding driver architectures and registering database-specific drivers.
+* **Core API Interfaces** – Working with `Connection`, `Statement`, `PreparedStatement`, and `ResultSet`.
+* **CRUD Operations** – Writing Java code to Insert, Read, Update, and Delete database records.
+* **SQL Injection Prevention** – Utilizing parameterized queries with `PreparedStatement` to keep transactions secure.
+* **Transaction Management** – Handling database commits and rollbacks programmatically using `setAutoCommit(false)`.
 
-You can explore specific topics by switching to their respective branches. Some of the core concepts covered include:
+## ❓ Frequently Asked Q&As
 
-* **`main` / `master`** – The default branch containing this README and general project guidelines.
-* **`oop-concepts`** – Object-Oriented Programming principles (Inheritance, Polymorphism, Encapsulation, Abstraction).
-* **`data-structures`** – Collections framework, Lists, Sets, Maps, and Arrays.
-* **`exception-handling`** – Try-catch blocks, custom exceptions, and error management.
-* **`multithreading`** – Concurrency, threads, and synchronization basics.
-* *(More concept-specific branches are added regularly!)*
+### Q1: What is the difference between `Statement` and `PreparedStatement`?
+* **`Statement`:** Compiles the SQL query every single time it runs. It is vulnerable to SQL injection attacks and is best used for simple, one-time static queries.
+* **`PreparedStatement`:** Pre-compiles the SQL query template on the database server. It accepts parameters dynamically, executes much faster over repetitive iterations, and inherently blocks SQL injection threats.
 
-### How to Switch Branches
-To view the code and Q&As for a specific topic, use the following Git command in your terminal:
-```bash
-git checkout <branch-name>
-```
-Alternatively, you can use the branch dropdown menu at the top-left of the GitHub interface to switch themes.
+### Q2: Why should we use try-with-resources when dealing with JDBC objects?
+Database connections, statements, and result sets are heavy system resources. If left open, they cause memory leaks and exhaust connection pools. Using a try-with-resources block ensures these resources are automatically closed when the block finishes, even if an exception occurs.
 
-## 🚀 How to Use This Repository
-1. **Clone the repository** to your local machine:
+### Q3: How do you handle database transactions manually in JDBC?
+By default, JDBC commits every individual statement automatically. To group multiple operations into a single transaction, you set `connection.setAutoCommit(false)`. You then invoke `connection.commit()` if all steps succeed, or `connection.rollback()` inside a catch block if any step fails.
+
+## 🚀 How to Run Code in This Branch
+1. Ensure you have switched to this branch locally:
    ```bash
-   git clone https://github.com
+   git checkout JDBC
    ```
-2. **Navigate** into the project directory:
-   ```bash
-   cd Programming-in-JAVA
-   ```
-3. **Fetch all branches** from remote:
-   ```bash
-   git fetch --all
-   ```
-4. **Switch** to the concept branch you wish to study and explore the source files.
-
-## 🤝 Contributing
-Contributions are always welcome! If you have a great Java Q&A or a code solution you'd like to share:
-1. Create a new branch for your specific topic/question.
-2. Commit your changes with clear messages.
-3. Open a **Pull Request** targeting the appropriate concept branch.
+2. Make sure you have the appropriate database driver JAR file (like MySQL Connector/J) added to your project's build path.
+3. Configure your local database credentials inside the sample program before running it.
