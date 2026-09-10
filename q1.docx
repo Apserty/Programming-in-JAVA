@@ -32,13 +32,13 @@ The string may contain spaces, lowercase letters, and uppercase letters.
 The string comparison is case-sensitive.
 
 Sample test cases :
-Input 1 :
-  ProgramMing
-Output 1 :
-  ProgamMin
-
-
-Input 2 :
-  Playing is fun
-Output 2 :
-  Playing sfu
+    Input 1 :
+      ProgramMing
+    Output 1 :
+      ProgamMin
+    
+    
+    Input 2 :
+      Playing is fun
+    Output 2 :
+      Playing sfu
