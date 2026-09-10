@@ -1,0 +1,44 @@
+Problem Statement
+
+
+
+Ashok needs to implement a program using the java.lang package to process a given string. 
+The goal is to create a program that extracts and displays a new stringcontaining only the unique characters from the provided input string, 
+while preserving the original order of first occurrence.
+
+
+
+The comparison of characters must be case-sensitive.
+
+
+
+Ashok should use the StringBuilder class to build the resulting string efficiently.
+
+Input format :
+The input consists of a single string.
+
+Output format :
+Print a string containing the unique characters from the given input string.
+
+
+
+Refer to the sample output for formatting specifications.
+
+Code constraints :
+1 ≤ Length of string ≤ 50
+
+The string may contain spaces, lowercase letters, and uppercase letters.
+
+The string comparison is case-sensitive.
+
+Sample test cases :
+Input 1 :
+  ProgramMing
+Output 1 :
+  ProgamMin
+
+
+Input 2 :
+  Playing is fun
+Output 2 :
+  Playing sfu
