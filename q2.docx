@@ -1,0 +1,61 @@
+Problem Statement
+
+
+
+Sharon is developing a Java program using in-built packages to manage a list of elements using arrays.
+
+
+
+Initially, the array contains two elements: Apple and Banana. Sharon needs to:
+
+Read an integer N (1 ≤ N ≤ 3) representing the number of new elements to add.
+Read N strings from the user and add them to the array.
+
+
+Finally, the program should display:
+
+The original array elements
+The updated array after adding all new elements
+
+
+Help Sharon complete the program using arrays, Strings, loops, and Scanner only.
+
+Input format :
+The first line of input contains an integer N, representing the number of new elements to be added.
+
+The next N lines each contain a string representing a new element.
+
+Output format :
+The first line of output prints "Original Array: Apple Banana"
+
+The second line of output prints "Array after adding new elements: <all elements separated by space>"
+
+
+
+Refer to the sample output for formatting specifications.
+
+Code constraints :
+1 ≤ N ≤ 3
+
+1 ≤ length of each string ≤ 20
+
+Strings contain only alphabetic characters (A–Z, a–z)
+
+Initial array always contains: Apple Banana
+
+Sample test cases :
+    Input 1 :
+        1
+        Orange
+    Output 1 :
+        Original Array: Apple Banana
+        Array after adding new elements: Apple Banana Orange
+
+          
+    Input 2 :
+        2
+        Grape
+        Mango
+    Output 2 :
+        Original Array: Apple Banana
+        Array after adding new elements: Apple Banana Grape Mango
