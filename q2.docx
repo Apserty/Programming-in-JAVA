@@ -1,0 +1,47 @@
+Problem Statement
+
+
+
+A local municipality is implementing an online voting system for a community event and wants to ensure that only eligible voters (those aged 18 or older) can participate. 
+
+
+
+Your task is to develop a program that validates the age of individuals attempting to vote online. If the user's age is below 18, the program should throw a custom exception, InvalidAgeException, preventing them from casting their vote.
+  If the input is invalid, catch the appropriate InputMismatchException and print the in-built exception message.
+
+Input format :
+The input consists of an integer representing the age.
+
+Output format :
+If the age is 18 or older, print "Eligible to vote"
+
+If the age is below 18, print "Exception occurred: InvalidAgeException: Age is not valid to vote"
+
+If there is any other type of exception, print "An error occurred: " followed by the in-built exception message.
+
+
+
+Refer to the sample output for formatting specifications.
+
+Code constraints :
+The given test cases fall under the following constraints:
+
+-100 ≤ age ≤ 100
+
+Sample test cases :
+      Input 1 :
+          20
+      Output 1 :
+          Eligible to vote
+
+            
+      Input 2 :
+          15
+      Output 2 :
+          Exception occurred: InvalidAgeException: Age is not valid to vote
+
+            
+      Input 3 :
+          XYZ
+      Output 3 :
+          An error occurred: java.util.InputMismatchException
