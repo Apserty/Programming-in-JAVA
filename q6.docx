@@ -1,0 +1,110 @@
+Problem Statement
+
+
+
+Write a program to validate an email address and display suitable exceptions if there is any mistake.
+
+
+
+Create three custom exception classes:
+
+DotException
+AtTheRateException
+DomainException
+
+
+An email address is considered valid only if:
+
+It contains exactly one @
+It contains exactly one . after @
+The email does not start or end with @ or .
+The email does not end with .
+The domain extension is the part after the last dot
+The domain extension must be one of in, com, net, biz
+If any condition fails, throw the respective exception and print the exception message followed by:
+
+Invalid email address
+
+
+
+If all conditions are satisfied, print:
+
+Valid email address
+
+
+
+Note: You may use predefined string functions such as endsWith, indexOf, lastIndexOf, substring, and charAt.
+
+Input format :
+The first line of input contains the email address to be validated.
+
+Output format :
+Print one of the following messages exactly:
+
+
+
+DotException: Invalid Dot usage
+
+Invalid email address
+
+
+
+AtTheRateException: Invalid @ usage
+
+Invalid email address
+
+
+
+DomainException: Invalid Domain
+
+Invalid email address
+
+
+
+Valid email address
+
+
+
+Refer to the sample input and output for format specifications.
+
+Code constraints :
+5 ≤ length(email) ≤ 50
+
+Email contains only alphanumeric characters, ., and @
+
+Exactly one @ must be present
+
+Exactly one . must appear after @
+
+Email must not start or end with @ or .
+
+Domain extension = text after the last dot
+
+Valid extensions: in, com, net, biz
+
+Sample test cases :
+      Input 1 :
+          sample@gmail.com
+      Output 1 :
+          Valid email address
+
+            
+      Input 2 :
+          sample@gmail.com.
+      Output 2 :
+          DotException: Invalid Dot usage
+          Invalid email address
+
+            
+      Input 3 :
+          sample@gmail.con
+      Output 3 :
+          DomainException: Invalid Domain
+          Invalid email address
+
+            
+      Input 4 :
+          a@b.v
+      Output 4 :
+          DomainException: Invalid Domain
+          Invalid email address
