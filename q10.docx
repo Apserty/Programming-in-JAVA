@@ -1,0 +1,65 @@
+Problem Statement
+
+
+
+Daniel is developing a program to verify the age of users. He wants to ensure that the entered age is within a valid range.
+Write a program to help Daniel implement this age-checking feature using custom exceptions.
+
+
+
+Daniel needs a program that takes an integer input representing a person's age.
+If the age is between 0 and 150 (inclusive), the program should print "Age is valid!".
+If the age is less than 0 or greater than 150, the program should throw a custom exception (InvalidAgeException) with the message "Invalid age. 
+Please enter an age between 0 and 150."
+
+
+Implement a custom exception, InvalidAgeException, to handle cases where the entered age does not meet the specified criteria.
+
+Input format :
+The input consists of an integer value 'n', representing the age.
+
+Output format :
+The output is displayed in the following format:
+
+If the age is valid (between 0 and 150, inclusive), print
+
+"Age is valid!".
+
+If the age is invalid, print
+
+"Error: Invalid age. Please enter an age between 0 and 150."
+
+
+
+Refer to the sample output for formatting specifications.
+
+Code constraints :
+In this scenario, the test cases fall under the following constraints:
+
+-10 ≤ n ≤ 175
+
+Sample test cases :
+
+
+      Input 1 :
+          45
+      Output 1 :
+          Age is valid!
+
+
+      Input 2 :
+          -5
+      Output 2 :
+          Error: Invalid age. Please enter an age between 0 and 150.
+
+
+      Input 3 :
+          175
+      Output 3 :
+          Error: Invalid age. Please enter an age between 0 and 150.
+
+
+      Input 4 :
+          0
+      Output 4 :
+          Age is valid!
