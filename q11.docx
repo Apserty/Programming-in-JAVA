@@ -1,0 +1,81 @@
+Problem Statement
+
+
+
+Nithya is creating a secure login validator for her mobile app. The system collects three inputs from the user: username, password, and mobile number. 
+The username must be between 4 and 20 characters. The password should be at least 8 characters long and contain one uppercase letter and one digit. 
+  The mobile number must be exactly 10 digits, start with 6–9, and contain only numbers.
+
+
+
+Nithya decides to validate each input separately using multi-try and multi-catch blocks. If any rule is broken, an IllegalArgumentException is thrown.
+    If the mobile number contains non-digits, a NumberFormatException is used. Even when one input is invalid, the program should continue to check and report the others.
+
+Input format :
+The first line of input contains a string representing the username.
+
+The second line of input contains a string representing the password.
+
+The third line of input contains a string representing the mobile number.
+
+Output format :
+The output prints three lines:
+
+For username:
+
+Username: <username> if valid
+Username: Error - Invalid username length (if invalid)
+For password:
+
+Password: <password> if valid
+Password: Error - Must be at least 8 chars, include uppercase and digit (if invalid)
+For mobile number:
+
+Mobile: <mobile> if valid
+Mobile: Error - Invalid mobile number (if invalid)
+
+
+Refer to the sample output for formatting specifications.
+
+Code constraints :
+Username length: 1 ≤ length ≤ 100
+
+Password length: 1 ≤ length ≤ 100
+
+Mobile number length: 1 ≤ length ≤ 100
+
+Mobile number contains digits only
+
+Password must have at least 8 characters, at least one uppercase letter, and at least one digit
+
+Sample test cases :
+
+
+      Input 1 :
+          Alice
+          Pass1234
+          9876543210
+      Output 1 :
+          Username: Alice
+          Password: Pass1234
+          Mobile: 9876543210
+
+            
+      Input 2 :
+          Bob
+          pass1234
+          9876543210
+      Output 2 :
+          Username: Error - Invalid username length
+          Password: Error - Must be at least 8 chars, include uppercase and digit
+          Mobile: 9876543210
+
+            
+      Input 3 :
+          Jo
+          Pass1234
+          4876543210
+      Output 3 :
+          Username: Error - Invalid username length
+          Password: Pass1234
+          Mobile: Error - Invalid mobile number
