@@ -1,0 +1,70 @@
+Single File Programming Question
+Problem Statement
+
+
+
+Alice is working on a program to calculate the factorial of a non-negative integer. However, she needs to implement error handling to address scenarios where the user inputs a negative number.
+
+
+
+The program takes user input for a non-negative integer and calculates its factorial using a recursive method. 
+The code includes exception handling to address potential issues:
+ If the input is negative, an IllegalArgumentException is thrown with a corresponding error message, and 
+ If the input is not a valid integer, an InputMismatchException is caught. 
+The program then prints the calculated factorial. 
+
+
+Assist Alice in this task.
+
+Input format :
+The input consists of an integer N.
+
+Output format :
+The output displays the result of the factorial calculation or an error message if applicable.
+
+If the user enters a negative integer, an IllegalArgumentException is thrown, and the corresponding error message is: "Error: Input must be non-negative"
+If the user enters a value that is not a valid integer, an InputMismatchException is caught, and the error message is: "Error: Input must be a valid integer."
+
+
+Refer to the sample output for formatting specifications.
+
+Code constraints :
+The given test cases fall under the following constraints:
+
+-10 ≤ N ≤ 20
+
+Sample test cases :
+      Input 1 :
+          5
+      Output 1 :
+          120
+
+            
+      Input 2 :
+          0
+      Output 2 :
+          1
+
+            
+      Input 3 :
+          -3
+      Output 3 :
+          Error: Input must be non-negative
+
+            
+      Input 4 :
+          abc
+      Output 4 :
+          Error: Input must be a valid integer.
+
+            
+      Input 5 :
+          1
+      Output 5 :
+          1
+
+            
+      Input 6 :
+          -10
+      Output 6 :
+          Error: Input must be non-negative
