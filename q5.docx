@@ -1,0 +1,60 @@
+A school is conducting a digital math workshop where students are required to input a list of their test scores to calculate the average. 
+  The system is designed to accept only positive integer scores. However, students might accidentally enter negative numbers, non-integer characters, or misspelled words 
+    while typing their inputs.
+
+
+
+To ensure accurate results, the system must validate the input, ignore invalid values with a warning, and calculate the average of all valid positive integers entered.
+
+
+
+The student is prompted to enter positive integers separated by spaces.
+If the number is negative, throw an IllegalArgumentException with the message "Error: Negative numbers are not allowed."
+If a non-integer value is encountered, catch the NumberFormatException and print a warning message: "Warning: Ignoring non-integer value 'value'"
+If the number is positive, add it to the sum and increment the count.
+Calculate the average as sum/count and print it with two decimal places.
+Input format :
+The input consists of a string with N numeric values, representing the integers separated by a space.
+
+Output format :
+The output prints one or more of the following:
+
+
+
+For each non-integer value encountered, print "Warning: Ignoring non-integer value '<value>'"
+
+If a negative integer is encountered, print "Error: Negative numbers are not allowed." and terminate the processing.
+
+Otherwise, after processing all valid inputs, print the average of all valid positive integers rounded to two decimal places.
+
+
+
+Refer to the sample output for formatting specifications.
+
+Code constraints :
+In this scenario, the test cases fall under the following constraints:
+
+-100 ≤ numeric values ≤ 100
+
+Non-integer values are ignored and do not contribute to the average.
+
+If a negative integer is encountered, no average should be printed.
+
+Sample test cases :
+      Input 1 :
+          10 5 4 8 14
+      Output 1 :
+          8.20
+
+            
+      Input 2 :
+          -1 -5 10 -5
+      Output 2 :
+          Error: Negative numbers are not allowed.
+
+            
+      Input 3 :
+          10 abd 20 30
+      Output 3 :
+          Warning: Ignoring non-integer value 'abd'
+          20.00
