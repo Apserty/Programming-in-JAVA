@@ -1,0 +1,105 @@
+Problem Statement
+
+
+
+Aarav is developing a fitness tracking system for a wellness center. The system records three inputs from the user in this order:
+
+
+
+The participant's weight (expected to be a valid positive double ≤ 300),
+The height in meters (expected to be a valid positive double ≤ 2.5),
+The workout duration in minutes (expected to be a valid integer between 1 and 300).
+
+
+Each field might throw an error:
+
+
+
+The weight may be non-numeric or out of range.
+The height may be non-numeric or out of range.
+The workout duration may be non-integer or out of range.
+
+
+Aarav wants to validate each field using a separate try-catch block. If a field is valid, print its value; otherwise, print a specific error message. Even if one field throws an exception, the validation for the other fields must continue.
+
+
+
+If both weight and height are valid, the program must also calculate and print the Body Mass Index (BMI) using the formula:
+
+BMI = weight / (height * height)
+
+The BMI must be printed rounded to 2 decimal places.
+
+Input format :
+The first line of input contains a double representing the participant's weight in kilograms.
+
+The second line of input contains a double representing the participant’s height in meters.
+
+The third line of input contains an integer representing the workout duration in minutes.
+
+Output format :
+The output prints three lines:
+
+Each line corresponds to one input field validation:
+
+For weight, print either Weight: <weight> if valid, or Weight: Error - Invalid weight value
+For height, print either Height: <height> if valid, or Height: Error - Invalid height value
+For workout duration, print either Workout Duration: <minutes> if valid, or Workout Duration: Error - Invalid workout duration
+
+
+If both weight and height are valid, print an additional line: BMI: <value> (rounded to 2 decimal places)
+
+
+
+﻿Refer to the sample output for formatting specifications.
+
+Code constraints :
+0 < weight ≤ 300 (can also be non-numeric)
+
+0 < height ≤ 2.5(can also be non-numeric)
+
+1 ≤ workout duration ≤ 300(can also be non-numeric)
+
+Sample test cases :
+
+
+      Input 1 :
+          68.54
+          1.75
+          60
+      Output 1 :
+          Weight: 68.54
+          Height: 1.75
+          Workout Duration: 60
+          BMI: 22.38
+
+            
+      Input 2 :
+          -10
+          1.74
+          45
+      Output 2 :
+          Weight: Error - Invalid weight value
+          Height: 1.74
+          Workout Duration: 45
+
+            
+      Input 3 :
+          72.34
+          abc
+          50
+      Output 3 :
+          Weight: 72.34
+          Height: Error - Invalid height value
+          Workout Duration: 50
+
+            
+      Input 4 :
+          95.34
+          1.92
+          310
+      Output 4 :
+          Weight: 95.34
+          Height: 1.92
+          Workout Duration: Error - Invalid workout duration
+          BMI: 25.86
