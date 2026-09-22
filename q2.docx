@@ -1,0 +1,57 @@
+Problem Statement
+
+
+
+Lisa is developing a smart thermostat system that monitors and controls room temperatures in a building. Each room has a temperature sensor, and the program needs to simulate reading temperature values using a thread.
+
+
+
+For a given building:
+
+A single thread represents the room's temperature sensor.
+The thread prints temperature readings from the lower range L to the upper range U.
+Each value should be displayed with a 5-millisecond delay.
+
+
+Your task is to implement a program that creates a thread for a single room, reads the temperature values, and prints them in the specified format.
+
+Input format :
+The first line of input consists of a string, representing the building name.
+
+The second line of input consists of an integer L, representing the lower temperature range.
+
+The third line of input consists of an integer U, representing the upper temperature range.
+
+Output format :
+The first line of output prints "Name - " followed by a string representing the building name.
+
+The second line of output prints the temperature values from L to U, separated by a single space.
+
+
+
+Refer to the sample output for the formatting specifications.
+
+Code constraints :
+The given test cases fall under the following constraints:
+
+10 ≤ L < U ≤ 25
+
+Sample test cases :
+
+
+      Input 1 :
+          Central Plaza
+          10
+          15
+      Output 1 :
+          Name - Central Plaza
+          10 11 12 13 14 15
+
+            
+      Input 2 :
+          Sky Tower
+          12
+          24
+      Output 2 :
+          Name - Sky Tower
+          12 13 14 15 16 17 18 19 20 21 22 23 24
