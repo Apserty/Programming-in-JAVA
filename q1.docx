@@ -1,0 +1,55 @@
+Problem Statement
+
+
+
+You are building a classroom participation tracker that alternates printing vowels and consonants using multithreading.
+
+
+
+One thread prints vowels (A, E, I, O, U in order, repeating cyclically if n > 5).
+
+Another thread prints consonants (B, C, D, F, G, H, J, K, L, M, N, P, Q, R, S, T, V, W, X, Y, Z in order).
+
+The threads alternate, starting with a vowel.
+
+
+
+For a given integer n, your program should print:
+
+Exactly n vowels and n consonants,
+
+Alternating in order: vowel → consonant → vowel → consonant …
+
+Each letter separated by a single space, with no trailing space.
+
+
+
+Note: The program must use Java multithreading concepts (Thread, wait(), notify()) for proper synchronization. Vowels repeat cyclically (A, E, I, O, U, A, E, …) if n > 5. Consonants are used in order without repetition.
+
+Input format :
+A single integer n representing the number of vowels (and consonants) to print.
+
+Output format :
+2 × n letters printed alternately starting with a vowel, separated by space, no trailing space.
+
+
+
+Refer to the sample output for the formatting specifications.
+
+Code constraints :
+The given test cases fall under the following constraints:
+
+1 ≤ n ≤ 21
+
+Sample test cases :
+
+Input 1 :
+10
+Output 1 :
+A B E C I D O F U G A H E J I K O L U M
+
+  
+Input 2 :
+7
+Output 2 :
+A B E C I D O F U G A H E J
