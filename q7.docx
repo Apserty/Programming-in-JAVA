@@ -1,0 +1,73 @@
+Problem Statement
+
+
+
+In a multi-threaded banking system, the initial account balance is set to 100. Multiple customers are concurrently performing transactions, such as depositing
+  
+  and withdrawing money from their accounts. The bank must ensure that the account balance is updated correctly, even when multiple transactions occur simultaneously.
+
+
+
+The system should be designed to handle concurrent customer transactions safely using multiple threads, ensuring data integrity and consistency at all times. 
+  The account balance must reflect the correct amount after all transactions have been processed.
+
+
+
+If a withdrawal request exceeds the current balance, the system should output "Insufficient funds!" without allowing the transaction.
+
+Input format :
+The first line contains an integer n, representing the number of transactions.
+
+The next n lines contain integers representing the transaction amount:
+
+A positive integer indicates a deposit.
+A negative integer indicates a withdrawal.
+Output format :
+The output prints a single integer, representing the final balance in the bank account in the format: "Final balance: X".
+
+If there is no sufficient amount to withdraw, print "Insufficient funds!".
+
+
+
+Refer to the sample output for formatting specifications.
+
+Code constraints :
+The given test cases fall under the following constraints:
+
+1 ≤ n ≤ 10
+
+-10000 ≤ transaction amount ≤ 10000
+
+Sample test cases :
+
+
+      Input 1 :
+          4
+          100
+          -50
+          100
+          -75
+      Output 1 :
+          Final balance: 175
+
+            
+      Input 2 :
+          4
+          100
+          -50
+          100
+          -300
+      Output 2 :
+          Insufficient funds!
+          Final balance: 250
+
+            
+      Input 3 :
+          3
+          -100
+          -50
+          -75
+      Output 3 :
+          Insufficient funds!
+          Insufficient funds!
+          Final balance: 0
