@@ -1,0 +1,113 @@
+Problem Statement
+
+
+
+Aarav is working on an automated file processing system for a tech conference. Each file contains a list of tasks. Aarav wants to distribute these tasks across a fixed 
+number of processors in round-robin order, then process each task by converting it to uppercase.
+
+
+
+Your task is to help Aarav implement this round-robin task distribution and display the processor ID along with the processed task in uppercase, in the order tasks were read.
+
+
+
+To achieve this, Aarav uses the following concepts:
+
+
+
+Multi-threading: To process multiple tasks using different processor threads.
+Synchronization: To maintain the correct order of task processing and ensure thread-safe output.
+
+
+Your task is to help Aarav implement this system to process all tasks and display the processor ID along with the processed task in uppercase.
+
+Input format :
+The first line contains an integer n - the number of files.
+
+For each file:
+
+The first line contains the filename (e.g., input1.txt).
+Subsequent lines contain tasks (strings), each on a new line.
+An empty line at the last indicates the file ends here.
+The last line contains an integer m - the number of processors.
+
+Output format :
+If the number of processors is less than 1 or greater than 32, print: "Invalid number of processors. Using 2 processors."
+
+Before processing the first line prints: "Processing files..."
+
+For each task, the next lines of the output prints: "Processor X - Processed: <TASK_IN_UPPERCASE>" Where X is the processor ID (starting from 1), and TASK_IN_UPPERCASE 
+is the processed task.
+
+
+
+Refer to the sample output for formatting specifications.
+
+Code constraints :
+The given test cases fall under the following constraints:
+
+1 ≤ n ≤ 5 (number of files)
+
+1 ≤ m ≤ 5 (number of processors)
+
+Each file contains 1 ≤ t ≤ 10 tasks.
+
+Task length: 1 ≤ length of each task ≤ 50 characters.
+
+Sample test cases :
+
+
+      Input 1 :
+          3
+          fileA.txt
+          Java
+          Python
+          
+          fileB.txt
+          C++
+          Go
+          
+          fileC.txt
+          Rust
+          Kotlin
+          
+          3
+      Output 1 :
+          Processing files...
+          Processor 1 - Processed: JAVA
+          Processor 2 - Processed: PYTHON
+          Processor 3 - Processed: C++
+          Processor 1 - Processed: GO
+          Processor 2 - Processed: RUST
+          Processor 3 - Processed: KOTLIN
+
+
+      Input 2 :
+          2
+          input1.txt
+          Hello World
+          Programming
+          
+          input2.txt
+          Multi-threading
+          World
+          
+          39
+      Output 2 :
+          Invalid number of processors. Using 2 processors.
+          Processing files...
+          Processor 1 - Processed: HELLO WORLD
+          Processor 2 - Processed: PROGRAMMING
+          Processor 1 - Processed: MULTI-THREADING
+          Processor 2 - Processed: WORLD
+
+
+      Input 3 :
+          1
+          single.txt
+          Only One Line
+          
+          2
+      Output 3 :
+          Processing files...
+          Processor 1 - Processed: ONLY ONE LINE
