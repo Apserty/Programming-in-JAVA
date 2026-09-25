@@ -1,0 +1,80 @@
+Problem Statement
+
+
+
+In a retail store, the inventory management system processes customer orders for products. Each customer orders a specific quantity of products.
+
+
+
+The system must:
+
+Process orders using multiple threads.
+Ensure thread-safe access to the shared stock.
+Preserve the input order when printing order results.
+
+
+For each order:
+
+If there is enough stock, the order is fulfilled and the inventory is updated.
+If the stock is insufficient, the order is rejected, and the customer is notified.
+Input format :
+First line: An integer representing the initial stock of products.
+Second line: An integer n, the number of customer orders.
+Next n lines: Each line contains a string (customer name) and an integer (quantity), separated by a space.
+Output format :
+For each customer, print the result in the same order as input:
+
+<customer name> successfully ordered <quantity> items.
+
+<customer name> failed to order <quantity> items. Insufficient stock!
+
+
+
+After all orders, print:
+
+Final stock: <remaining stock>
+
+
+
+Refer to the sample output for formatting specifications.
+
+Code constraints :
+0 ≤ initialStock ≤ 1000
+
+0 ≤ numOrders ≤ 100
+
+0 ≤ orderQuantity ≤ 1000
+
+Customer names are non-empty strings containing only alphabets
+
+
+
+Sample test cases :
+
+
+      Input 1 :
+          100
+          3
+          John 30
+          Alice 50
+          Bob 40
+      Output 1 :
+          John successfully ordered 30 items.
+          Alice successfully ordered 50 items.
+          Bob failed to order 40 items. Insufficient stock!
+          Final stock: 20
+
+            
+      Input 2 :
+          200
+          4
+          Michael 100
+          Lisa 20
+          David 50
+          Sarah 80
+      Output 2 :
+          Michael successfully ordered 100 items.
+          Lisa successfully ordered 20 items.
+          David successfully ordered 50 items.
+          Sarah failed to order 80 items. Insufficient stock!
+          Final stock: 30
