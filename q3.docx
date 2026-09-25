@@ -1,0 +1,56 @@
+Problem Statement
+
+
+
+Sharon is developing a multi-threaded application that simulates a word printing system. The application will have two threads, each responsible for printing words from a given sentence. 
+
+
+
+However, the printing of words should be synchronized between the two threads to ensure orderly output.
+
+
+
+Sharon is unaware of the multi-threading concept. Assist her in achieving her task.
+
+Input format :
+The input consists of a single string.
+
+Output format :
+The output prints the words on the below format:
+
+Words are printed alternatively by two threads, preserving the original word order.
+Each word should be printed on a separate line, prefixed with the thread name (e.g., "Thread 1: word" or "Thread 2: word").
+
+
+Refer to the sample output for formatting specifications.
+
+Code constraints :
+2 ≤ Length of the input string ≤ 200
+
+
+
+The input string contains at least 2 space-separated words.
+
+
+
+Words are separated by a single space.
+
+Sample test cases :
+
+  
+      Input 1 :
+          I love java very much
+      Output 1 :
+          Thread 1: I
+          Thread 2: love
+          Thread 1: java
+          Thread 2: very
+          Thread 1: much
+
+            
+      Input 2 :
+          Java is fun
+      Output 2 :
+          Thread 1: Java
+          Thread 2: is
+          Thread 1: fun
