@@ -1,0 +1,38 @@
+Problem Statement
+
+
+
+Lisa is working on understanding threading in Java. She needs a program that displays a custom message after a delay of 2 seconds using a thread.
+
+
+
+Your task is to write a program that accepts a user message as input, creates a thread, and displays the message after a delay of 2 seconds.
+
+Input format :
+The first line of input consists of a string, representing the message to be displayed.
+
+Output format :
+The output prints the given message after a delay of 2 seconds.
+
+
+
+Refer to the sample output for the formatting specifications.
+
+Code constraints :
+The given test cases fall under the following constraints:
+
+The message will have a length of 1 ≤ message length ≤ 100 characters.
+
+Sample test cases :
+
+
+    Input 1 :
+        Central Plaza
+    Output 1 :
+        Central Plaza
+
+          
+    Input 2 :
+        Sky Tower
+    Output 2 :
+        Sky Tower
