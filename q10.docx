@@ -1,0 +1,70 @@
+Problem Statement
+
+In a banking system with an initial balance of 100, multiple customers perform deposit and withdrawal transactions one after another. Each transaction is executed
+  using a separate thread to demonstrate thread-safe access to a shared account balance, ensuring the balance is updated correctly and consistently.
+
+
+
+The system should process transactions in the given input order, using synchronized methods to guard the shared account balance, so that even though each transaction 
+  runs on its own thread, the result is identical to what a single-threaded sequential run would produce — demonstrating safe concurrent access control rather than 
+    parallel execution.
+
+
+
+The initial balance is 100. Transactions are processed strictly in input order: if a withdrawal exceeds the current balance, it is rejected and "Insufficient funds!" is printed; 
+otherwise the balance is updated.
+
+Input format :
+The first line of input contains an integer n, representing the number of transactions
+
+The next n lines contain integers representing the transaction amount. A positive integer indicates a deposit and a negative integer indicates a withdrawal.
+
+Output format :
+The output prints "Final balance: ", followed by an integer, representing the final balance in the bank account.
+
+If there is no sufficient amount to withdraw, print "Insufficient funds!".
+
+
+
+Refer to the sample output for formatting specifications.
+
+Code constraints :
+The given test cases fall under the following constraints:
+
+1 ≤ n ≤ 10
+
+-1000 ≤ transaction amount ≤ 1000
+
+Sample test cases :
+
+
+    Input 1 :
+        4
+        100
+        -50
+        100
+        -75
+    Output 1 :
+        Final balance: 175
+
+          
+    Input 2 :
+        4
+        100
+        -50
+        100
+        -300
+    Output 2 :
+        Insufficient funds!
+        Final balance: 250
+
+          
+    Input 3 :
+        3
+        -100
+        -50
+        -75
+    Output 3 :
+        Insufficient funds!
+        Insufficient funds!
+        Final balance: 0
